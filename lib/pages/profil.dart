@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:main/pages/edit_profile.dart';
 import 'package:main/pages/login.dart';
 
 void main() {
@@ -72,7 +73,9 @@ class ProfilPage extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child:InkWell(
                 onTap: () {
-                  print("tapped");
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                      return EditProfilePage() ;
+                    }));
                 },
                 child: Row(
                   children: const [
